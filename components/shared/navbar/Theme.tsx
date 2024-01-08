@@ -2,7 +2,7 @@ import React from "react";
 import { useTheme } from "@/context/ThemeProvider";
 
 const Theme = () => {
-  const { mode, setMode } = useThem();
+  const { mode, setMode } = useTheme();
   return <div>Theme</div>;
 };
 
