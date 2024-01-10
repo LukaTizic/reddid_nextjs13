@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import RenderTag from "./RenderTag";
 
 const dummy = [
   {
@@ -23,6 +24,14 @@ const dummy = [
     _id: 5,
     title: "Velit egestas dui id ornare arcu odio ut",
   },
+];
+
+const dummyTags = [
+  { _id: 1, name: "javascript", totalQuestions: 5 },
+  { _id: 2, name: "javascript", totalQuestions: 2 },
+  { _id: 3, name: "javascript", totalQuestions: 3 },
+  { _id: 4, name: "javascript", totalQuestions: 7 },
+  { _id: 5, name: "javascript", totalQuestions: 11 },
 ];
 
 const RightSidebar = () => {
@@ -49,7 +58,20 @@ const RightSidebar = () => {
           ))}
         </div>
       </div>
-      <div className='mt-16'>test</div>
+      <div className='mt-16'>
+        <h3 className='h3-bold text-dark200_light900'>Popular Tags</h3>
+        <div className='mt-7 flex flex-col gap-4'>
+          {dummyTags.map((tag) => (
+            <RenderTag
+              key={tag._id}
+              _id={tag._id}
+              name={tag.name}
+              totalQuestions={tag.totalQuestions}
+              showCount
+            />
+          ))}
+        </div>
+      </div>
     </section>
   );
 };
