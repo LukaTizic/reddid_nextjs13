@@ -1,6 +1,13 @@
 import React from "react";
 
-const RenderTag = () => {
+interface Props {
+  _id: number;
+  name: string;
+  totalQuestions?: number;
+  showCount?: boolean;
+}
+
+const RenderTag = ({ _id, name, totalQuestions, showCount }: Props) => {
   return <div>RenderTag</div>;
 };
 
