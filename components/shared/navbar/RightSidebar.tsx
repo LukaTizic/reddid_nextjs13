@@ -28,10 +28,10 @@ const dummy = [
 
 const dummyTags = [
   { _id: 1, name: "javascript", totalQuestions: 5 },
-  { _id: 2, name: "javascript", totalQuestions: 2 },
-  { _id: 3, name: "javascript", totalQuestions: 3 },
-  { _id: 4, name: "javascript", totalQuestions: 7 },
-  { _id: 5, name: "javascript", totalQuestions: 11 },
+  { _id: 2, name: "react", totalQuestions: 2 },
+  { _id: 3, name: "CSS" },
+  { _id: 4, name: "HTML", totalQuestions: 7 },
+  { _id: 5, name: "nextjs", totalQuestions: 11 },
 ];
 
 const RightSidebar = () => {
