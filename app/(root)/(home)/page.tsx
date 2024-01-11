@@ -1,5 +1,6 @@
+import LocalSearchBar from "@/components/shared/navbar/search/LocalSearchBar";
 import { Button } from "@/components/ui/button";
-import { UserButton } from "@clerk/nextjs";
+
 import Link from "next/link";
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
         </Link>
       </div>
       <div className='mt-11 flex justify-between gap-5 max-sm:flex-col items-center'>
-        LocalSearchBar FIlters
+        <LocalSearchBar /> FIlters
       </div>
     </>
   );
