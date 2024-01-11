@@ -1,3 +1,4 @@
+import Filter from "@/components/shared/Filter";
 import LocalSearchBar from "@/components/shared/navbar/search/LocalSearchBar";
 import { Button } from "@/components/ui/button";
 
@@ -23,7 +24,7 @@ export default function Home() {
           placeholder='Search for questions'
           otherClasses='flex-1'
         />
-        FIlters
+        <Filter />
       </div>
     </>
   );
