@@ -50,7 +50,7 @@ const QuestionCard = ({
           imgUrl='/assets/icons/avatar.svg'
           alt='user'
           value={author.name}
-          title='- posted 1hour ago'
+          title={` - asked ${getTimestamp(createdAt)} `}
           href={`/profile/${author._id}`}
           isAuthor
           textStyles='body-medium text-dark400_light700'
