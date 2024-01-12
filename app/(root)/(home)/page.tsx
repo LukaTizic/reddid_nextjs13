@@ -18,8 +18,8 @@ const questions = [
       { _id: "2", name: "js" },
     ],
     author: { _id: "123", name: "John Doe", picture: "url/to/picture" },
-    upvotes: 10,
-    views: 100,
+    upvotes: 32132110,
+    views: 3213100,
     answers: [
       /* an object representing an answer */
     ],
@@ -34,8 +34,8 @@ const questions = [
       { _id: "4", name: "js" },
     ],
     author: { _id: "456", name: "John Doe", picture: "url/to/picture" },
-    upvotes: 10,
-    views: 100,
+    upvotes: 1110,
+    views: 132132100,
     answers: [],
     createdAt: new Date("2023-11-04T12:00:00.000Z"),
   },
