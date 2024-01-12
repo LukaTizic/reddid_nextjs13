@@ -1,6 +1,7 @@
 import HomeFilters from "@/components/home/HomeFilters";
 import Filter from "@/components/shared/Filter";
 import NoResult from "@/components/shared/NoResult";
+import QuestionCard from "@/components/shared/cards/QuestionCard";
 import LocalSearchBar from "@/components/shared/navbar/search/LocalSearchBar";
 import { Button } from "@/components/ui/button";
 import { HomePageFilters } from "@/constants/filters";
@@ -8,7 +9,7 @@ import { HomePageFilters } from "@/constants/filters";
 import Link from "next/link";
 
 const questions = [
-  /*{
+  {
     _id: 1,
     title: "balblwqlbwlqlbqw?",
     tags: [
@@ -33,7 +34,7 @@ const questions = [
     views: 100,
     answers: 2,
     createdAt: "2021-09-01T12:00:00:000Z",
-  },*/
+  },
 ];
 
 export default function Home() {
@@ -66,7 +67,7 @@ export default function Home() {
 
       <div className='mt-10 flex w-full flex-col gap-6'>
         {questions.length > 0 ? (
-          questions.map((question) => "Questionscard")
+          questions.map((question) => <QuestionCard />)
         ) : (
           <NoResult
             title="There's no question to show"
