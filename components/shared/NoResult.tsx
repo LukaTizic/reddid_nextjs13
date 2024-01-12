@@ -3,7 +3,14 @@ import Link from "next/link";
 import React from "react";
 import { Button } from "../ui/button";
 
-const NoResult = () => {
+interface Props {
+  title: string;
+  description: string;
+  link: string;
+  linkTitle: string;
+}
+
+const NoResult = ({ title, description, link, linkTitle }: Props) => {
   return (
     <div className='mt-10 flex w-full flex-col items-center justify-center'>
       <Image
