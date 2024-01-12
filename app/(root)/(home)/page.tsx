@@ -34,9 +34,7 @@ const questions = [
     author: { _id: "456", name: "John Doe", picture: "url/to/picture" },
     upvotes: 10,
     views: 100,
-    answers: [
-      /* an object representing an answer */
-    ],
+    answers: [],
     createdAt: new Date("2021-09-01T12:00:00:000Z"),
   },
 ];
@@ -80,7 +78,7 @@ export default function Home() {
               author={question.author}
               upvotes={question.upvotes}
               views={question.views}
-              asnwers={question.anwers}
+              answers={question.answers}
               createdAt={question.createdAt}
             />
           ))
