@@ -11,7 +11,8 @@ import Link from "next/link";
 const questions = [
   {
     _id: 1,
-    title: "balblwqlbwlqlbqw?",
+    title:
+      "Why do certain moments in history become enduring symbols of resilience?",
     tags: [
       { _id: "1", name: "python" },
       { _id: "2", name: "js" },
@@ -26,7 +27,8 @@ const questions = [
   },
   {
     _id: 2,
-    title: "AAAAAAAAAAAAAAA?",
+    title:
+      "What celestial phenomena have captivated human imagination for centuries?",
     tags: [
       { _id: "3", name: "css" },
       { _id: "4", name: "js" },
