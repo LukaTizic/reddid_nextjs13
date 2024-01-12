@@ -5,33 +5,33 @@ import RenderTag from "./RenderTag";
 
 const dummy = [
   {
-    _id: 1,
+    _id: "1",
     title: "Velit egestas dui id ornare arcu odio ut?",
   },
   {
-    _id: 2,
+    _id: "2",
     title: "Velit egestas dui id ornare arcu odio ut?",
   },
   {
-    _id: 3,
+    _id: "3",
     title: "Velit egestas dui id ornare arcu odio ut?",
   },
   {
-    _id: 4,
+    _id: "4",
     title: "Velit egestas dui id ornare arcu odio ut?",
   },
   {
-    _id: 5,
+    _id: "5",
     title: "Velit egestas dui id ornare arcu odio ut?",
   },
 ];
 
 const dummyTags = [
-  { _id: 1, name: "javascript", totalQuestions: 5 },
-  { _id: 2, name: "react", totalQuestions: 2 },
-  { _id: 3, name: "CSS" },
-  { _id: 4, name: "HTML", totalQuestions: 7 },
-  { _id: 5, name: "nextjs", totalQuestions: 11 },
+  { _id: "1", name: "javascript", totalQuestions: 5 },
+  { _id: "2", name: "react", totalQuestions: 2 },
+  { _id: "3", name: "CSS" },
+  { _id: "4", name: "HTML", totalQuestions: 7 },
+  { _id: "5", name: "nextjs", totalQuestions: 11 },
 ];
 
 const RightSidebar = () => {
