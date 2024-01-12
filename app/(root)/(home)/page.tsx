@@ -10,7 +10,7 @@ import Link from "next/link";
 
 const questions = [
   {
-    _id: 1,
+    _id: "1",
     title:
       "Why do certain moments in history become enduring symbols of resilience?",
     tags: [
@@ -26,7 +26,7 @@ const questions = [
     createdAt: new Date("2021-09-01T12:00:00:000Z"),
   },
   {
-    _id: 2,
+    _id: "2",
     title:
       "What celestial phenomena have captivated human imagination for centuries?",
     tags: [
