@@ -46,10 +46,33 @@ const QuestionCard = ({
       </div>
       <div className='flex-between mt-6 w-full flex-wrap gap-3'>
         <Metric
+          imgUrl='/assets/icons/avatar.svg'
+          alt='user'
+          value={author.name}
+          title='- posted 1hour ago'
+          href={`/profile/${author._id}`}
+          isAuthor
+          textStyles='body-medium text-dark400_light700'
+        />
+        <Metric
           imgUrl='/assets/icons/like.svg'
           alt='upvotes'
           value={upvotes}
           title='Votes'
+          textStyles='small-medium text-dark400_light800'
+        />
+        <Metric
+          imgUrl='/assets/icons/message.svg'
+          alt='message'
+          value={answers.length}
+          title='Answers'
+          textStyles='small-medium text-dark400_light800'
+        />
+        <Metric
+          imgUrl='/assets/icons/eye.svg'
+          alt='eye'
+          value={views}
+          title='Views'
           textStyles='small-medium text-dark400_light800'
         />
       </div>
