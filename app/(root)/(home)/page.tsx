@@ -13,27 +13,31 @@ const questions = [
     _id: 1,
     title: "balblwqlbwlqlbqw?",
     tags: [
-      { _id: 1, name: "python" },
-      { _id: 1, name: "js" },
+      { _id: "1", name: "python" },
+      { _id: "2", name: "js" },
     ],
-    author: "John Doe",
+    author: { _id: "123", name: "John Doe", picture: "url/to/picture" },
     upvotes: 10,
     views: 100,
-    answers: 2,
-    createdAt: "2021-09-01T12:00:00:000Z",
+    answers: [
+      /* an object representing an answer */
+    ],
+    createdAt: new Date("2021-09-01T12:00:00:000Z"),
   },
   {
     _id: 2,
     title: "AAAAAAAAAAAAAAA?",
     tags: [
-      { _id: 1, name: "css" },
-      { _id: 1, name: "js" },
+      { _id: "3", name: "css" },
+      { _id: "4", name: "js" },
     ],
-    author: "John Doe",
+    author: { _id: "456", name: "John Doe", picture: "url/to/picture" },
     upvotes: 10,
     views: 100,
-    answers: 2,
-    createdAt: "2021-09-01T12:00:00:000Z",
+    answers: [
+      /* an object representing an answer */
+    ],
+    createdAt: new Date("2021-09-01T12:00:00:000Z"),
   },
 ];
 
