@@ -72,7 +72,12 @@ const Question = () => {
   // 2. Define a submit handler.
   function onSubmit(values: z.infer<typeof QuestionsSchema>) {
     setIsSubmitting(true);
-    console.log(values);
+    try {
+      // add async call to API > create question
+    } catch (error) {
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
