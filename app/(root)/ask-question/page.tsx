@@ -1,7 +1,14 @@
+import Question from "@/components/forms/Question";
 import React from "react";
 
-const page = () => {
-  return <div>Ask Question</div>;
+const Page = () => {
+  return (
+    <div>
+      <div>
+        <Question />
+      </div>
+    </div>
+  );
 };
 
-export default page;
+export default Page;
