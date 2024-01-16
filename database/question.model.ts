@@ -1,5 +1,4 @@
-import { Schema, models, model, Document, Date } from "mongoose";
-import { date } from "zod";
+import { Schema, models, model, Document } from "mongoose";
 
 export interface IQuestions extends Document {
   title: string;
@@ -22,7 +21,7 @@ const QuestionSchema = new Schema({
   downvotes: [{ type: Schema.Types.ObjectId, ref: "User" }],
   author: { type: Schema.Types.ObjectId, ref: "User" },
   answers: [{ type: Schema.Types.ObjectId, ref: "Answers" }],
-  createdAt: { type: date, default: Date.now },
+  createdAt: { type: Date, default: Date.now },
 });
 
 const Question = models.Question || model("Question", QuestionSchema);
