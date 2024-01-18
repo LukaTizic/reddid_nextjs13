@@ -5,44 +5,13 @@ import QuestionCard from "@/components/shared/cards/QuestionCard";
 import LocalSearchBar from "@/components/shared/navbar/search/LocalSearchBar";
 import { Button } from "@/components/ui/button";
 import { HomePageFilters } from "@/constants/filters";
+import { getQuestions } from "@/lib/actions/question.action";
 
 import Link from "next/link";
 
-const questions = [
-  {
-    _id: "1",
-    title:
-      "Why do certain moments in history become enduring symbols of resilience?",
-    tags: [
-      { _id: "1", name: "python" },
-      { _id: "2", name: "js" },
-    ],
-    author: { _id: "123", name: "John Doe", picture: "url/to/picture" },
-    upvotes: 32132110,
-    views: 3213100,
-    answers: [
-      /* an object representing an answer */
-    ],
-    createdAt: new Date("2023-09-01T12:00:00.000Z"),
-  },
-  {
-    _id: "2",
-    title:
-      "What celestial phenomena have captivated human imagination for centuries?",
-    tags: [
-      { _id: "3", name: "css" },
-      { _id: "4", name: "js" },
-    ],
-    author: { _id: "456", name: "John Doe", picture: "url/to/picture" },
-    upvotes: 1110,
-    views: 132132100,
-    answers: [],
-    createdAt: new Date("2023-11-04T12:00:00.000Z"),
-  },
-];
-
 export default async function Home() {
-  // const result = await getQuestions();
+  const result = await getQuestions({});
+  console.log(result.questions);
 
   return (
     <>
@@ -72,8 +41,8 @@ export default async function Home() {
       <HomeFilters />
 
       <div className='mt-10 flex w-full flex-col gap-6'>
-        {questions.length > 0 ? (
-          questions.map((question) => (
+        {result.questions.length > 0 ? (
+          result.questions.map((question) => (
             <QuestionCard
               key={question._id}
               _id={question._id}
