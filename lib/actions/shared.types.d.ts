@@ -4,9 +4,10 @@ export interface GetQuestionsParams {
   searchQuery?: string;
   filter?: string;
 }
-export interface CreateAnswerParams {
+export interface CreateQuestionParams {
+  title: string;
   content: string;
-  author: string; // User ID
-  question: string; // Question ID
+  tags: string[];
+  author: Schema.Types.ObjectId | IUser;
   path: string;
 }
