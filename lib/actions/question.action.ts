@@ -4,6 +4,8 @@ import Question from "@/database/question.model";
 import { connectToDatabase } from "../mongoose";
 import Tag from "@/database/tag.model";
 
+export async function getQuestion(params) {}
+
 export async function createQuestion(params: any) {
   try {
     connectToDatabase();
