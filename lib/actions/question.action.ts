@@ -5,6 +5,7 @@ import { connectToDatabase } from "../mongoose";
 import Tag from "@/database/tag.model";
 import { CreateQuestionParams, GetQuestionsParams } from "./shared.types";
 import User from "@/database/user.model";
+import { revalidatePath } from "next/cache";
 
 export async function getQuestions(params: GetQuestionsParams) {
   try {
@@ -53,11 +54,6 @@ export async function createQuestion(params: CreateQuestionParams) {
     });
 
     // Create an interaction record for the user's ask_question action
-    await Interaction.create({
-      user: author,
-      action: "ask_question",
-      question: question._id,
-      tags: tagDocuments,
-    });
+    revalidatePath(path);
   } catch (error) {}
 }
