@@ -38,7 +38,7 @@ const QuestionCard = ({
             </h3>
           </Link>
         </div>
-        {/*Do to delete/edit */}
+        {/* Do to delete/edit */}
       </div>
       <div className='mt-3.5 flex flex-wrap gap-2'>
         {tags.map((tag) => (

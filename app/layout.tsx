@@ -1,5 +1,4 @@
-/* eslint-disable @typescript-eslint/camelcase */
-
+/* eslint no-use-before-define: 0 */
 import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
 import "./globals.css";
