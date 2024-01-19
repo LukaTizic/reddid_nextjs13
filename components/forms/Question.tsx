@@ -21,7 +21,7 @@ import { Badge } from "../ui/badge";
 import Image from "next/image";
 import { createQuestion } from "@/lib/actions/question.action";
 import { useRouter, usePathname } from "next/navigation";
-import router from "next/router";
+// import router from "next/router";
 
 const type: any = "create";
 
