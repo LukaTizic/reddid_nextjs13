@@ -8,7 +8,6 @@ import {
   UpdateUserParams,
 } from "./shared.types";
 import { revalidatePath } from "next/cache";
-import path from "path";
 import Question from "@/database/question.model";
 
 export async function getUserById(params: any) {
@@ -53,7 +52,6 @@ export async function deleteUser(params: DeleteUserParams) {
   try {
     connectToDatabase();
     const { clerkId } = params;
-    console.log(clerkId);
 
     const user = await User.findOneAndDelete({ clerkId });
 
