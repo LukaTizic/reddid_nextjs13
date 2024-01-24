@@ -1,4 +1,5 @@
 import Metric from "@/components/shared/Metric";
+import ParseHtml from "@/components/shared/ParseHtml";
 import { getQuestionById } from "@/lib/actions/question.action";
 import { formatAndDivideNumber, getTimestamp } from "@/lib/utils";
 import Image from "next/image";
@@ -57,6 +58,7 @@ const Page = async ({ params, searchParams }) => {
           textStyles='small-medium text-dark400_light800'
         />
       </div>
+      <ParseHtml data={result.content} />
     </>
   );
 };
