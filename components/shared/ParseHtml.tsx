@@ -25,8 +25,12 @@ import "prismjs/components/prism-mongodb";
 import "prismjs/plugins/line-numbers/prism-line-numbers.js";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-const ParseHtml = () => {
-  return <div>ParseHtml</div>;
+interface Props {
+  data: string;
+}
+
+const ParseHtml = ({ data }: Props) => {
+  return <div>{parse(data)}</div>;
 };
 
 export default ParseHtml;
