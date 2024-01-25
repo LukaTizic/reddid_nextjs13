@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Prism from "prismjs";
 import parse from "html-react-parser";
 
@@ -30,6 +31,9 @@ interface Props {
 }
 
 const ParseHtml = ({ data }: Props) => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
   return <div>{parse(data)}</div>;
 };
 

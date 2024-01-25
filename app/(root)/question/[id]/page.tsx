@@ -1,7 +1,9 @@
 import Metric from "@/components/shared/Metric";
 import ParseHtml from "@/components/shared/ParseHtml";
+import RenderTag from "@/components/shared/RenderTag";
 import { getQuestionById } from "@/lib/actions/question.action";
 import { formatAndDivideNumber, getTimestamp } from "@/lib/utils";
+import { Key } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -59,6 +61,17 @@ const Page = async ({ params, searchParams }) => {
         />
       </div>
       <ParseHtml data={result.content} />
+
+      <div className='mt-8 flex flex-wrap gap2'>
+        {result.tags.map((tag: any) => (
+          <RenderTag
+            key={tag._id}
+            _id={tag._id}
+            name={tag.name}
+            showCount={false}
+          />
+        ))}
+      </div>
     </>
   );
 };
