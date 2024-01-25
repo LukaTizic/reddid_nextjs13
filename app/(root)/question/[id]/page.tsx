@@ -1,3 +1,4 @@
+import Answer from "@/components/forms/Answer";
 import Metric from "@/components/shared/Metric";
 import ParseHtml from "@/components/shared/ParseHtml";
 import RenderTag from "@/components/shared/RenderTag";
@@ -72,6 +73,7 @@ const Page = async ({ params, searchParams }) => {
           />
         ))}
       </div>
+      <Answer />
     </>
   );
 };
