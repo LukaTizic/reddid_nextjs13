@@ -132,42 +132,46 @@ const Question = ({ mongoUserId }: Props) => {
                 Detailed explanation of your problem{" "}
                 <span className='text-primary-500'>*</span>
               </FormLabel>
-              <Editor
-                apiKey={process.env.NEXT_PUBLIC_TINY_EDITOR_API_KEY}
-                onInit={(evt, editor) => {
-                  // @ts-ignore
-                  editorRef.current = editor;
-                }}
-                onBlur={field.onBlur}
-                onEditorChange={(content) => field.onChange(content)}
-                initialValue=''
-                init={{
-                  height: 350,
-                  menubar: false,
-                  plugins: [
-                    "advlist",
-                    "autolink",
-                    "lists",
-                    "link",
-                    "image",
-                    "charmap",
-                    "preview",
-                    "anchor",
-                    "searchreplace",
-                    "visualblocks",
-                    "codesample",
-                    "fullscreen",
-                    "insertdatetime",
-                    "media",
-                    "table",
-                  ],
-                  toolbar:
-                    "undo redo | " +
-                    "codesample | bold italic forecolor | alignleft aligncenter |" +
-                    "alignright alignjustify | bullist numlist",
-                  content_style: "body { font-family:Inter; font-size:16px }",
-                }}
-              />
+              <FormControl className='mt-3.5'>
+                <Editor
+                  apiKey={process.env.NEXT_PUBLIC_TINY_EDITOR_API_KEY}
+                  onInit={(evt, editor) => {
+                    // @ts-ignore
+                    editorRef.current = editor;
+                  }}
+                  onBlur={field.onBlur}
+                  onEditorChange={(content) => field.onChange(content)}
+                  initialValue=''
+                  init={{
+                    height: 350,
+                    menubar: false,
+                    plugins: [
+                      "advlist",
+                      "autolink",
+                      "lists",
+                      "link",
+                      "image",
+                      "charmap",
+                      "preview",
+                      "anchor",
+                      "searchreplace",
+                      "visualblocks",
+                      "codesample",
+                      "fullscreen",
+                      "insertdatetime",
+                      "media",
+                      "table",
+                    ],
+                    toolbar:
+                      "undo redo | " +
+                      "codesample | bold italic forecolor | alignleft aligncenter |" +
+                      "alignright alignjustify | bullist numlist",
+                    content_style: "body { font-family:Inter; font-size:16px }",
+                    skin: mode === "dark" ? "oxide-dark" : "oxide",
+                    content_css: mode === "dark" ? "dark" : "light",
+                  }}
+                />
+              </FormControl>
               <FormDescription className='body-regular mt-3.5 text-light-500'>
                 Introduce the problem and expand on what you put in the title.
                 Make it minimum 20 characters.
