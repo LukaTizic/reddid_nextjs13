@@ -17,7 +17,6 @@ import { useTheme } from "@/context/ThemeProvider";
 import { Button } from "../ui/button";
 import Image from "next/image";
 import { createAnswer } from "@/lib/actions/answer.action";
-import { Props } from "next/script";
 import { usePathname } from "next/navigation";
 
 interface Props {
