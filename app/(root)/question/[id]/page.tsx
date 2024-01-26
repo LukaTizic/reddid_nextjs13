@@ -1,4 +1,5 @@
 import Answer from "@/components/forms/Answer";
+import AllAnswers from "@/components/shared/AllAnswers";
 import Metric from "@/components/shared/Metric";
 import ParseHtml from "@/components/shared/ParseHtml";
 import RenderTag from "@/components/shared/RenderTag";
@@ -81,6 +82,9 @@ const Page = async ({ params, searchParams }) => {
           />
         ))}
       </div>
+
+      <AllAnswers />
+
       <Answer
         question={result.content}
         questionId={JSON.stringify(result._id)}
