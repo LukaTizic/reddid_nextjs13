@@ -1,6 +1,20 @@
 import React from "react";
 
-const AllAnswers = () => {
+interface Props {
+  questionId: string;
+  userId: string;
+  totalAnswers: number;
+  page?: number;
+  filter?: string;
+}
+
+const AllAnswers = ({
+  questionId,
+  userId,
+  totalAnswers,
+  page,
+  filter,
+}: Props) => {
   return <div>AllAnswers</div>;
 };
 
