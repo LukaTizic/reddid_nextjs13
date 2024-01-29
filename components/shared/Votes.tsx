@@ -89,7 +89,7 @@ const Votes = ({
           height={18}
           alt='star'
           className='cursor-pointer'
-          onClick={handleSave()}
+          onClick={handleSave}
         />
       )}
     </div>
