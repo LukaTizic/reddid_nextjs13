@@ -7,6 +7,7 @@ import Link from "next/link";
 import React from "react";
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import ProfileLink from "@/components/shared/ProfileLink";
 
 const Page = async ({ params, searchParams }: URLProps) => {
   const userInfo = await getUserInfo({ userId: params.id });
@@ -28,7 +29,7 @@ const Page = async ({ params, searchParams }: URLProps) => {
             <p>@{userInfo.user.username}</p>
 
             <div className='mt-5 flex flex-wrap items-center justify-start gap-5'>
-              {userInfo.user.location && <>Location</>}
+              {userInfo.user.location && <ProfileLink />}
             </div>
             {userInfo.user.bio && (
               <p className='paragraph-regular text-dark400_light800 mt-8'>
