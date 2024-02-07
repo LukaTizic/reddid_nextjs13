@@ -51,15 +51,17 @@ const Page = async ({ params, searchParams }: URLProps) => {
       </div>
       Stats
       <div className='mt-10 flex gap-10'>
-        <Tabs defaultValue='account' className='w-[400px]'>
-          <TabsList>
-            <TabsTrigger value='account'>Account</TabsTrigger>
-            <TabsTrigger value='password'>Password</TabsTrigger>
+        <Tabs defaultValue='top-posts' className='flex-1'>
+          <TabsList className='background-light800_dark400 min-h-[42px] p-1'>
+            <TabsTrigger value='top-posts' className='tab'>
+              Top Posts
+            </TabsTrigger>
+            <TabsTrigger value='answers' className='tab'>
+              Answers
+            </TabsTrigger>
           </TabsList>
-          <TabsContent value='account'>
-            Make changes to your account here.
-          </TabsContent>
-          <TabsContent value='password'>Change your password here.</TabsContent>
+          <TabsContent value='top-posts'>Posts</TabsContent>
+          <TabsContent value='answers'>Answers</TabsContent>
         </Tabs>
       </div>
     </>
