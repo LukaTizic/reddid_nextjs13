@@ -29,7 +29,12 @@ const Page = async ({ params, searchParams }: URLProps) => {
             <p>@{userInfo.user.username}</p>
 
             <div className='mt-5 flex flex-wrap items-center justify-start gap-5'>
-              {userInfo.user.location && <ProfileLink />}
+              {userInfo.user.location && (
+                <ProfileLink
+                  imgUrl='/assets/icons/location.svg'
+                  title={userInfo.user.location}
+                />
+              )}
             </div>
             {userInfo.user.bio && (
               <p className='paragraph-regular text-dark400_light800 mt-8'>

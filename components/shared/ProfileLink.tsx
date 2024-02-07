@@ -1,6 +1,12 @@
 import React from "react";
 
-const ProfileLink = () => {
+interface ProfileLinkProps {
+  imgUrl: string;
+  href?: string;
+  title: string;
+}
+
+const ProfileLink = ({ imgUrl, href, title }: ProfileLinkProps) => {
   return <div>ProfileLink</div>;
 };
 
