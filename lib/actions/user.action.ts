@@ -17,9 +17,7 @@ import {
 } from "./shared.types";
 import { revalidatePath } from "next/cache";
 import Question from "@/database/question.model";
-import console from "console";
 import Answer from "@/database/answer.model";
-import console from "console";
 import { QuestionsSchema } from "../validations";
 
 export async function getUserById(params: any) {
