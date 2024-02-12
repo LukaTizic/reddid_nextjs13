@@ -1,4 +1,6 @@
 import { formatAndDivideNumber } from "@/lib/utils";
+import Image from "next/image";
+import { title } from "process";
 import React from "react";
 
 interface Props {
@@ -13,7 +15,17 @@ interface StatsCardProps {
 }
 
 const StatsCard = ({ imgUrl, value, title }: StatsCardProps) => {
-  return <div></div>;
+  return (
+    <div className='light-border background-light900_dark300 flex flex-wrap items-center justify-start gap-4 rounded-md border p-6 shadow-light-300 dark:shadow-dark-200'>
+      <Image src={imgUrl} alt='medal' width={40} height={50} />
+      <div>
+        <p className='flex justify-center paragraph-semibold text-dark200_light900 '>
+          {value}
+        </p>
+        <p className='body-medium text-dark400_light700  '>{title}</p>
+      </div>
+    </div>
+  );
 };
 
 const Stats = ({ totalQuestions, totalAnswers }: Props) => {
@@ -36,7 +48,7 @@ const Stats = ({ totalQuestions, totalAnswers }: Props) => {
           </div>
         </div>
         <StatsCard
-          imgUrl='/assets/icons/golds-medal.svg'
+          imgUrl='/assets/icons/gold-medal.svg'
           value={0}
           title='Gold Badges'
         />
