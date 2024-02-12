@@ -6,6 +6,16 @@ interface Props {
   totalAnswers: number;
 }
 
+interface StatsCardProps {
+  imgUrl: string;
+  value: number;
+  title: string;
+}
+
+const StatsCard = ({ imgUrl, value, title }: StatsCardProps) => {
+  return <div></div>;
+};
+
 const Stats = ({ totalQuestions, totalAnswers }: Props) => {
   return (
     <div className='mt-10'>
@@ -25,6 +35,21 @@ const Stats = ({ totalQuestions, totalAnswers }: Props) => {
             <p className='body-medium text-dark400_light700  '>Answers</p>
           </div>
         </div>
+        <StatsCard
+          imgUrl='/assets/icons/golds-medal.svg'
+          value={0}
+          title='Gold Badges'
+        />
+        <StatsCard
+          imgUrl='/assets/icons/silver-medal.svg'
+          value={0}
+          title='Silver Badges'
+        />
+        <StatsCard
+          imgUrl='/assets/icons/bronze-medal.svg'
+          value={0}
+          title='Bronze Badges'
+        />
       </div>
     </div>
   );
