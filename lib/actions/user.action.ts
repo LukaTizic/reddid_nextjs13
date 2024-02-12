@@ -11,6 +11,7 @@ import {
   GetAllUsersParams,
   GetSavedQuestionsParams,
   GetUserByIdParams,
+  GetUserStatsParams,
   ToggleSaveQuestionParams,
   UpdateUserParams,
 } from "./shared.types";
@@ -18,6 +19,8 @@ import { revalidatePath } from "next/cache";
 import Question from "@/database/question.model";
 import console from "console";
 import Answer from "@/database/answer.model";
+import console from "console";
+import { QuestionsSchema } from "../validations";
 
 export async function getUserById(params: any) {
   try {
@@ -184,6 +187,28 @@ export async function getUserInfo(params: GetUserByIdParams) {
     const totalAnswers = await Answer.countDocuments({ author: user._id });
 
     return { user, totalAnswers, totalQuestions };
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+}
+
+export async function getUserQuestions(params: GetUserStatsParams) {
+  try {
+    connectToDatabase();
+
+    const { userId, page = 1, pageSize = 10 } = params;
+
+    const totalQuestions = await Question.countDocuments({ author: userId });
+
+    const userQuestions = await Question.find({ author: userId })
+      .sort({
+        views: -1,
+        upvotes: -1,
+      })
+      .populate("tags", "_id name")
+      .populate("author", "_id clerkId name picture");
+    return { totalQuestions, questions: userQuestions };
   } catch (error) {
     console.log(error);
     throw error;
