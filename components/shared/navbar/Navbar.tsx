@@ -16,10 +16,10 @@ const Navbar = () => {
           src='/assets/images/site-logo.svg'
           width={23}
           height={23}
-          alt='flowdev'
+          alt='Reddid'
         />
         <p className='h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden '>
-          Flow <span className='text-primary-500'>Dev</span>
+          Red<span className='text-primary-500'>Did</span>
         </p>
       </Link>
       <GlobalSearch />
