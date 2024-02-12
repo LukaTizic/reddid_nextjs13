@@ -9,6 +9,8 @@ import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProfileLink from "@/components/shared/ProfileLink";
 import Stats from "@/components/shared/Stats";
+import QuestionsTab from "@/components/shared/QuestionsTab";
+import AnswersTab from "@/components/shared/AnswersTab";
 
 const Page = async ({ params, searchParams }: URLProps) => {
   const userInfo = await getUserInfo({ userId: params.id });
@@ -80,8 +82,12 @@ const Page = async ({ params, searchParams }: URLProps) => {
               Answers
             </TabsTrigger>
           </TabsList>
-          <TabsContent value='top-posts'>Posts</TabsContent>
-          <TabsContent value='answers'>Answers</TabsContent>
+          <TabsContent value='top-posts'>
+            <QuestionsTab />
+          </TabsContent>
+          <TabsContent value='answers'>
+            <AnswersTab />
+          </TabsContent>
         </Tabs>
       </div>
     </>
