@@ -1,6 +1,11 @@
 import React from "react";
 
-const Stats = () => {
+interface Props {
+  totalQuestions: number;
+  totalAnswers: number;
+}
+
+const Stats = ({ totalQuestions, totalAnswers }: Props) => {
   return <div>Stats</div>;
 };
 
