@@ -21,7 +21,6 @@ const Page = async ({ params, searchParams }) => {
     mongoUser = await getUserById({ userId: clerkId });
   }
   const result = await getQuestionById({ questionId: params.id });
-  console.log(result);
 
   return (
     <>
