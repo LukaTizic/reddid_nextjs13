@@ -1,3 +1,6 @@
+`Currently under development, need to add few features`
+
+
 This is a `Reddid 📱💻` project with [`Demo-link`](https://stack-nextjs13.vercel.app/).
 
 <HR/>
